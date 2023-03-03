@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import React from 'react';
-import { HiSearch, HiOutlineShoppingCart } from 'react-icons/hi';
+import { HiSearch, HiOutlineShoppingCart, HiMenu } from 'react-icons/hi';
 
 export default function Header() {
   return (
@@ -25,7 +26,7 @@ export default function Header() {
             <HiSearch className="" />
           </div>
         </div>
-        <div className="text-white text-xs flex items-center space-x-6 mx-6 whitespace-nowrapcursor-pointer">
+        <div className="text-white text-xs flex items-center space-x-6 mx-6 whitespace-nowrap cursor-pointer">
           <div className="link">
             <p>Hello Himu</p>
             <p className="font-extrabold md:text-sm">Account & List</p>
@@ -35,12 +36,29 @@ export default function Header() {
             <p className="font-extrabold md:text-sm">& Order</p>
           </div>
           <div className="relative link flex items-center">
+            <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
+              4
+            </span>
             <HiOutlineShoppingCart className="text-4xl mx-auto" />
             <p className="hidden sm:inline font-extrabold md:text-sm">Basket</p>
           </div>
         </div>
       </div>
-      <div className="">{/* Bottom Nav */}</div>
+      <div className=" flex items-center bg-amazon_blue-light text-white text-sm p-2 pl-6 space-x-3 ">
+        <p className="link flex items-center">
+          <HiMenu className="h-6 mr-1 " />
+          All
+        </p>
+        <p className="link ">Prime Video</p>
+        <p className="link ">Amazon Bsiness</p>
+        <p className="link ">Today's Deals</p>
+        <p className="link hidden lg:inline-flex">Electronic</p>
+        <p className="link hidden lg:inline-flex">Food & Grocery</p>
+        <p className="link hidden lg:inline-flex">Prime</p>
+        <p className="link hidden lg:inline-flex">Buy Again</p>
+        <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
+        <p className="link hidden lg:inline-flex">Health & Personal Care</p>
+      </div>
     </header>
   );
 }

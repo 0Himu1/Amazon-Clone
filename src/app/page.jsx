@@ -1,7 +1,17 @@
-export default function Home() {
+import Banner from '@/component/Banner';
+import ProductFeed from '@/component/ProductFeed';
+
+export default async function Home() {
+  const products = await fetch('https://fakestoreapi.com/products').then((res) => res.json());
+
   return (
-    <div className="p-10">
-      <h1>Hello Bois</h1>
+    <div className="max-w-screen-2xl mx-auto">
+      <Banner />
+      <ProductFeed products={products} />
     </div>
   );
 }
+
+// export async function getServerSideProps(context) {
+//   return { props: { products } };
+// }
