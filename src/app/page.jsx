@@ -11,7 +11,3 @@ export default async function Home() {
     </div>
   );
 }
-
-// export async function getServerSideProps(context) {
-//   return { props: { products } };
-// }
