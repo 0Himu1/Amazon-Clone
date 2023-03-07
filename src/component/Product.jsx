@@ -5,7 +5,6 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { HiStar } from 'react-icons/hi';
-import Currency from 'react-currency-formatter';
 
 export default function Product({ product }) {
   const [ratting] = useState(
@@ -33,7 +32,7 @@ export default function Product({ product }) {
       </div>
       <p className="text-xs my-2 line-clamp-2">{description}</p>
       <div className="m-5 ">
-        <Currency quantity={price} currency="GBP" />
+        <p>{price}</p>
       </div>
       {hasPrime && (
       <div className="flex items-center space-x-2 -mt-5">

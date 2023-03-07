@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.16",
     "@tailwindcss/line-clamp": "^0.4.2",
     "eslint-config-next": "13.2.1",
     "next": "13.2.1",
